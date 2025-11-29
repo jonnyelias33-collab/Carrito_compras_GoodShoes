@@ -2,13 +2,45 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="d-flex flex-column align-items-center justify-content-center" style="min-height:60vh;">
-    <img src="~/img/Logo_shoes.png" alt="GoodShoes" width="150" class="mb-3" />
-    <h1>Bienvenido a GoodShoes</h1>
-    <p class="lead mb-4">Tu tienda de zapatos</p>
+<!-- FONDO GENERAL DE TODA LA PÁGINA -->
+<style>
+    body {
+        background: linear-gradient(135deg, #bcd1ff 0%, #e6e6e6 100%) !important;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+</style>
+
+<div class="d-flex flex-column align-items-center justify-content-center"
+     style="
+        min-height: 70vh;
+        background: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        max-width: 900px;
+        margin: 40px auto;
+     ">
+
+    <img src="~/img/Logo_shoes.png" alt="GoodShoes" width="160" class="mb-4"
+         style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));" />
+
+    <h1 class="text-dark fw-bold mb-3" style="font-size: 2.5rem;">
+        Bienvenido a <span style="color:#0d6efd;">GoodShoes</span>
+    </h1>
+
+    <p class="lead text-secondary mb-4" style="font-size: 1.2rem;">
+        Calidad, estilo y confort a un paso de ti.
+    </p>
 
     <div>
-        <a class="btn btn-primary btn-lg me-2" asp-controller="Login" asp-action="Index">Ingresar</a>
-        <a class="btn btn-success btn-lg" asp-controller="Login" asp-action="Registrar">Registrarse</a>
+        <a class="btn btn-primary btn-lg me-3 px-4 py-2"
+           style="border-radius: 12px; font-size: 1.1rem;"
+           asp-controller="Login" asp-action="Index">Ingresar</a>
+
+        <a class="btn btn-success btn-lg px-4 py-2"
+           style="border-radius: 12px; font-size: 1.1rem;"
+           asp-controller="Login" asp-action="Registrar">Registrarse</a>
     </div>
 </div>
